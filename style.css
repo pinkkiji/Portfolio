@@ -106,11 +106,6 @@ nav {
   width: auto;
   height: 4rem;
   padding: 0.2rem 0;
-  filter:
-    drop-shadow(3px 0 0 white)
-    drop-shadow(-3px 0 0 white)
-    drop-shadow(0 3px 0 white)
-    drop-shadow(0 -3px 0 white);
 }
 
 .nav-list {
