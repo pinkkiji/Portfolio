@@ -102,15 +102,22 @@ nav {
 }
 
 .logo {
-  display: block;
+  display: inline-block;
   height: 4rem;
   width: auto;
   padding: 0.2rem 0;
+  background-color: #8D8AFB;
+  -webkit-mask-image: url('https://assets.momokiji.com/img/logowhite.png');
+  mask-image: url('https://assets.momokiji.com/img/logowhite.png');
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-position: center;
   filter:
-    drop-shadow(1px 0 0 white)
-    drop-shadow(-1px 0 0 white)
-    drop-shadow(0 1px 0 white)
-    drop-shadow(0 -1px 0 white);
+    drop-shadow(3px 0 0 white)
+    drop-shadow(-3px 0 0 white)
+    drop-shadow(0 3px 0 white)
+    drop-shadow(0 -3px 0 white);
 }
 
 .nav-list {
