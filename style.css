@@ -183,9 +183,8 @@ nav {
 }
 
 .artwork img {
-  width: 100%;
+  width: auto;
   max-width: 100%;
-  max-height: 30%;
   padding: 0.5rem;
 }
 
