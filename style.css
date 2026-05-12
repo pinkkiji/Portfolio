@@ -46,7 +46,7 @@ h2 {
 
 p {
   color: var(--muted);
-  max-width: 60ch;
+  max-width: auto;
   overflow-wrap: anywhere;
 }
 a { color: var(--text); text-decoration: none; }
