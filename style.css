@@ -82,9 +82,13 @@ header {
   background: linear-gradient(225deg, var(--bg-from) 0%, var(--bg-to) 100%);
   border-bottom-left-radius: var(--radius-card);
   border-bottom-right-radius: var(--radius-card);
+}
+
+nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
 }
 
 .nav-list {
@@ -98,7 +102,6 @@ header {
 }
 
 .logo {
-  size: 10%;
   padding: 0.5rem;
   filter:
     drop-shadow(0 0 3px white);
