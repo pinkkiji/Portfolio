@@ -74,41 +74,52 @@ header {
   font-family: var(--font-main);
   width: 100%;
   height: auto;
-  min-height: 4rem;
-  padding: 0.5rem 1rem;
+  min-height: 4.5rem;
+  padding: 0rem 1.5rem;
   margin: 0;
   border-bottom: 1px solid #ffffff;
   box-shadow: var(--shadow-card);
   background: linear-gradient(225deg, var(--bg-from) 0%, var(--bg-to) 100%);
   border-bottom-left-radius: var(--radius-card);
   border-bottom-right-radius: var(--radius-card);
-  display: block;
+  display: flex;
+  align-items: center;
 }
 
 nav {
   display: flex;
-  align-items: center;
+  flex-flow: row nowrap;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
 }
 
-.nav-list {
+.logo-link {
   display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  gap: 1.5rem;
-  font-size: 13px;
-  color: var(--text);
+  align-items: center;
+  height: 100%;
+  overflow: visible;
 }
 
 .logo {
   display: block;
-  height: 2.5rem;
+  height: 2.8rem;
   width: auto;
-  padding: 0.2rem;
+  padding: 0.2rem 0;
   filter: drop-shadow(0 0 3px white);
 }
+
+.nav-list {
+  display: flex;
+  flex-flow: row nowrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1.5rem;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
 
 .container1 {
   width: auto;
