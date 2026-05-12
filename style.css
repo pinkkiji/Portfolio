@@ -167,6 +167,7 @@ nav {
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem;
   width: 100%;
+  box-shadow: 0 0 2px #404040;
 }
 
 .artwork {
