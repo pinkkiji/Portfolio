@@ -1,0 +1,166 @@
+/* ============================================
+   style.css — Portfolio Modern Theme
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap');
+
+/* ---------- Variables ---------- */
+:root {
+  --bg-from:      #d8b4fe;
+  --bg-to:    #93c5fd;
+  --card-bg:  #ffffff;
+  --accent:  #6ef0c8;
+  --text:    #404040;
+  --muted:   #6b6b80;
+
+  --font-main:    'Urbanist', sans-serif;
+  --font-display: 'Urbanist', sans-serif;
+  --font-body:    'DM Sans', sans-serif;
+
+  --radius-card:  20px;
+  --shadow-card:  0 8px 32px rgba(124, 58, 237, 0.12);
+}
+
+/* ---------- Reset ---------- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ---------- Base ---------- */
+h1 {
+  font-family: var(--font-main);
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  background: linear-gradient(135deg, var(--text) 40%, var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+h2 {
+  font-family: var(--font-main);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+p {
+  color: var(--muted);
+  max-width: 60ch;
+  overflow-wrap: anywhere;
+}
+a { color: var(--text); text-decoration: none; }
+a:hover { opacity: 0.75; }
+
+
+body {
+  font-family: var(--font-main);
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--bg-from) 0%, var(--bg-to) 100%);
+  background-attachment: fixed;
+  color: var(--text);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  padding: 0rem;
+  margin: 0rem;
+}
+
+header, nav {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  font-family: var(--font-main);
+  font-size: 2rem;
+  width: 100%;
+  height: 4rem;
+  padding: 1rem;
+  margin: 0;
+  border-bottom: 1px solid #ffffff;
+  box-shadow: var(--shadow-card);
+  background: linear-gradient(225deg, var(--bg-from) 0%, var(--bg-to) 100%);
+  border-bottom-left-radius: var(--radius-card);
+  border-bottom-right-radius: var(--radius-card);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1.5rem;
+  font-size: 13px;
+  font-family: var(--text);
+}
+
+.logo {
+  size: 10%;
+}
+
+.container1 {
+  width: auto;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 2fr;  
+}
+
+.icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.iconimg {
+  width: 70%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: cover;
+  border: #ffffff;
+  box-shadow: 0 4px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1024px) {
+  .container1 {
+    width: auto;
+    grid-template-columns: 1fr;
+  }
+
+}
+
+.description {
+}
+
+/* ---------- Card Block ---------- */
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius-card);
+  padding: 2rem;
+  box-shadow: var(--shadow-card);
+  margin: 1rem; 
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  width: 100%;
+}
+
+.artwork {
+  aspect-ratio: 16/9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.artwork img {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* ---------- Typography ---------- */
