@@ -179,11 +179,13 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 1px solid #e0e0e0;
 }
 
 .artwork img {
   width: 100%;
   max-width: 100%;
+  padding: 0.5rem;
 }
 
 /* ---------- Typography ---------- */
