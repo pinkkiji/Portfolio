@@ -149,14 +149,6 @@ nav {
   box-shadow: 0 4px 10px 0px rgba(0, 0, 0, 0.1);
 }
 
-@media (max-width: 1024px) {
-  .container1 {
-    width: auto;
-    grid-template-columns: 1fr;
-  }
-
-}
-
 .description {
 }
 
@@ -190,3 +182,15 @@ nav {
 }
 
 /* ---------- Typography ---------- */
+@media (max-width: 1024px) {
+  .container1 {
+    width: auto;
+    grid-template-columns: 1fr;
+  }
+  .gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  width: 100%;
+  }
+}
