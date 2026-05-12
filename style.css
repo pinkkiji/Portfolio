@@ -99,6 +99,9 @@ header {
 
 .logo {
   size: 10%;
+  padding: 0.5rem;
+  filter:
+    drop-shadow(0 0 3px white);
 }
 
 .container1 {
