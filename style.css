@@ -172,8 +172,6 @@ nav {
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem;
   width: 100%;
-  object-fit: cover;
-  max-height: 500px;
   aspect-ratio: 16/9;
 }
 
@@ -182,6 +180,8 @@ nav {
   justify-content: center;
   align-items: center;
   border: 1px solid #e0e0e0;
+  max-height: 500px;
+  object-fit: cover;
 }
 
 .artwork img {
