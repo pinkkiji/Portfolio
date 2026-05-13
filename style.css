@@ -71,6 +71,7 @@ header, nav {
 }
 
 header {
+  position: relative;
   font-family: var(--font-main);
   width: 100%;
   height: auto;
@@ -153,7 +154,6 @@ nav {
   width: auto;
 }
 
-/* ---------- Card Block ---------- */
 .card {
   background: var(--card-bg);
   border-radius: var(--radius-card);
@@ -182,7 +182,24 @@ nav {
   padding: 0.5rem;
 }
 
-/* ---------- Typography ---------- */
+.humberger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.humburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: var(--text);
+  transition: 0.3s;
+}
+
 @media (max-width: 1024px) {
   .container1 {
     width: auto;
@@ -193,5 +210,22 @@ nav {
   grid-template-columns: 1fr;
   gap: 1rem;
   width: 100%;
+  }
+  .humberger {
+    display: flex;
+  }
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 4.5rem;
+    right: 0;
+    background: var(--card-bg);
+    width: 100%;
+    padding: 1rem;
+    box-shadow: var(--shadow-card);
+  }
+  .nav-list.open {
+    display: flex;
   }
 }
