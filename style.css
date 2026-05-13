@@ -221,6 +221,7 @@ nav {
     position: absolute;
     top: 0;
     padding-top: 5.5rem;
+    z-index: -1;
     right: 0;
     left: auto;
     background: rgba(255, 255, 255, 0.3);
@@ -233,6 +234,7 @@ nav {
   }
   .nav-list li {
     width: 100%;
+    top: 4.5rem;
   }  
   .nav-list a {
     display: block;
