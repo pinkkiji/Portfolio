@@ -182,7 +182,7 @@ nav {
   padding: 0.5rem;
 }
 
-.humberger {
+.hamberger {
   display: none;
   flex-direction: column;
   gap: 5px;
@@ -192,7 +192,7 @@ nav {
   padding: 0.5rem;
 }
 
-.humburger span {
+.hamburger span {
   display: block;
   width: 25px;
   height: 3px;
@@ -211,7 +211,7 @@ nav {
   gap: 1rem;
   width: 100%;
   }
-  .humberger {
+  .hamberger {
     display: flex;
   }
   .nav-list {
