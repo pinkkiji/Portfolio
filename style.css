@@ -224,11 +224,16 @@ nav {
     left: auto;
     background: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(10px);
-    width: 100%;
+    width: auto;
+    min-width: 150px;
+    text-align: right;
     padding: 0.5rem;
     box-shadow: var(--shadow-card);
     text-shadow: 0 0 3px #000000;
   }
+  .nav-list li {
+    width: 100%;
+  }  
   .nav-list.open {
     display: flex;
   }
