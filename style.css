@@ -190,6 +190,7 @@ nav {
   border: none;
   cursor: pointer;
   padding: 0.5rem;
+  color: white;
 }
 
 .hamburger span {
