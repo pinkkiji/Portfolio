@@ -71,6 +71,7 @@ header, nav {
 }
 
 header {
+  z-index: 1;
   position: relative;
   font-family: var(--font-main);
   width: 100%;
@@ -221,7 +222,6 @@ nav {
     position: absolute;
     top: 0;
     padding-top: 5.5rem;
-    z-index: -1;
     right: 0;
     left: auto;
     background: rgba(255, 255, 255, 0.3);
