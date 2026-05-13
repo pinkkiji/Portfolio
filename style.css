@@ -231,7 +231,7 @@ nav {
     width: 100%;
     text-align: right;
     box-shadow: var(--shadow-card);
-    text-shadow: 0 0 3px #000000;
+    text-shadow: 0 0 3px #a0a0a0;
   }
   .nav-list li {
     width: 100%;
