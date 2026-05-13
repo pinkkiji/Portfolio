@@ -89,6 +89,7 @@ header {
 }
 
 nav {
+  z-index: 5;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
