@@ -218,6 +218,7 @@ nav {
     display: flex;
   }
   .nav-list {
+    z-index: -1;
     display: none;
     flex-direction: column;
     position: absolute;
@@ -235,6 +236,7 @@ nav {
   }
   .nav-list li {
     width: 100%;
+    border: 1px solid #404040;
   }  
   .nav-list a {
     display: block;
