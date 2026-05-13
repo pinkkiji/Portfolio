@@ -235,7 +235,7 @@ nav {
   }
   .nav-list li {
     width: 100%;
-    border: 3px dotted #a0a0a0;
+    border: 2px dotted #a0a0a0a0;
     border-radius: 10px;
   }  
   .nav-list a {
