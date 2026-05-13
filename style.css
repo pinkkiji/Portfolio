@@ -234,6 +234,11 @@ nav {
   .nav-list li {
     width: 100%;
   }  
+  .nav-list a {
+    display: block;
+    padding: 0.5rem 1rem;
+    width: 100%;
+  }
   .nav-list.open {
     display: flex;
   }
