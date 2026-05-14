@@ -232,7 +232,7 @@ nav {
     width: 100%;
     text-align: right;
     box-shadow: var(--shadow-card);
-    text-shadow: 0 0 3px #808080;
+    text-shadow: 0 0 3px #404040;
   }
   .nav-list li {
     width: 100%;
