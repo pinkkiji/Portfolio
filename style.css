@@ -249,4 +249,7 @@ nav {
   .nav-list.open {
     display: flex;
   }
+  .card {
+  margin: 1rem; 
+  }
 }
