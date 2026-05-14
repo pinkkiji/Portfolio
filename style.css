@@ -232,13 +232,9 @@ nav {
     width: 100%;
     text-align: right;
     box-shadow: var(--shadow-card);
-<<<<<<< HEAD
     border-bottom-left-radius: var(--radius-card);
     border-bottom-right-radius: var(--radius-card);
     text-shadow: 0 0 3px #404040;
-=======
-    text-shadow: 0 0 3px #404040;
->>>>>>> 12663471a29986d1d1ece68fbb9a5f35eb5d6c4f
   }
   .nav-list li {
     width: 100%;
