@@ -203,6 +203,28 @@ nav {
   transition: 0.3s;
 }
 
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.carousel-progress {
+  height: 3px;
+  background: #eee;
+}
+
+.carousel-bar {
+  height: 100%;
+  width: 0%;
+  background: var(--accent);
+  transition: width linear;
+}
+
 @media (max-width: 1024px) {
   .container1 {
     width: auto;
