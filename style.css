@@ -253,13 +253,13 @@ nav {
   display: flex;
   padding: 0 2rem;
   align-items: center;
+  justify-content: center;
 }
 
 .carousel-item img {
   width: 40%;
   height: 100%;
   object-fit: contain;
-  align-items: center;
   border: 1px solid #e0e0e0;
 }
 
