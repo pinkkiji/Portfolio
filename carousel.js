@@ -22,18 +22,17 @@ async function initCarousel() {
     </div>
   `).join('');
 
-    // initCarousel内のstartTimer()の前に追加
-    const dots = document.querySelector('.carousel-dots');
-    dots.innerHTML = items.map((_, i) => 
-      `<div class="carousel-dot${i === 0 ? ' active' : ''}" data-index="${i}"></div>`
-    ).join('');
+  const dots = document.querySelector('.carousel-dots');
+  dots.innerHTML = items.map((_, i) => 
+    `<div class="carousel-dot${i === 0 ? ' active' : ''}" data-index="${i}"></div>`
+  ).join('');
 
-    dots.querySelectorAll('.carousel-dot').forEach(dot => {
-      dot.addEventListener('click', () => {
-        stopTimer();
-        goTo(parseInt(dot.dataset.index), true);
-      });
+  dots.querySelectorAll('.carousel-dot').forEach(dot => {
+    dot.addEventListener('click', () => {
+      stopTimer();
+      goTo(parseInt(dot.dataset.index), true);
     });
+  });
 
   startTimer();
 }
