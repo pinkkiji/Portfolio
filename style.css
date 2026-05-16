@@ -241,7 +241,7 @@ nav {
 .carousel:hover .carousel-prev,
 .carousel:hover .carousel-next {
   opacity: 1;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(4px);
 }
 
