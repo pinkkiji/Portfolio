@@ -4,6 +4,23 @@ let total = 0;
 let timer = null;
 let auto = true;
 
+let touchStartX = 0;
+
+document.querySelector('.carousel').addEventListener('touchstart', (e) => {
+  touchStartX = e.touches[0].clientX;
+});
+
+document.querySelector('.carousel').addEventListener('touchend', (e) => {
+  const diff = touchStartX - e.changedTouches[0].clientX;
+  if (Math.abs(diff) < 50) return; // 50px未満は無視
+  stopTimer();
+  if (diff > 0) {
+    goTo(current + 1, true); // 左スワイプ → 次へ
+  } else {
+    goTo(current - 1, true); // 右スワイプ → 前へ
+  }
+});
+
 async function initCarousel() {
   const res = await fetch('https://assets.momokiji.com/shop.json');
   const items = await res.json();
