@@ -15,6 +15,7 @@ async function initCarousel() {
       <img src="${item.image}" alt="${item.title}">
       <div class="carousel-info">
         <p class="carousel-title">${item.title}</p>
+        <p class="carousel-description">${item.description}</p>
         <p class="carousel-price">${item.price}</p>
         <a href="${item.url}" target="_blank" class="carousel-btn">BOOTHで購入</a>
       </div>
