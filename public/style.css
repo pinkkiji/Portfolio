@@ -362,6 +362,7 @@ nav {
     margin: 1rem; 
   }
   .carousel-item {
+    height: 25vh;
     width: 100%;
     font-size: 0.9rem;
   }
