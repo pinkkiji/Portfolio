@@ -26,17 +26,21 @@ async function initCarousel() {
 }
 
 function goTo(index, manual = false) {
-  current = (index + total) % total;
-  document.querySelector('.carousel-track').style.transform = 
-    `translateX(-${current * 100}%)`;
-  if (!manual) {
-    resetBar();
-  } else {
-    // バーを止めたままにする
-    const bar = document.querySelector('.carousel-bar');
-    bar.style.transition = 'none';
-    bar.style.width = '0%';
-  }
+    current = (index + total) % total;
+    document.querySelector('.carousel-track').style.transform = 
+      `translateX(-${current * 100}%)`;
+    if (!manual) {
+      resetBar();
+    } else {
+      // バーを止めたままにする
+      const bar = document.querySelector('.carousel-bar');
+      bar.style.transition = 'none';
+      bar.style.width = '0%';
+    }
+    // goTo関数内に追加
+    document.querySelectorAll('.carousel-dot').forEach((dot, i) => {
+        dot.classList.toggle('active', i === current);
+    });
 }
 
 function resetBar() {
@@ -48,6 +52,19 @@ function resetBar() {
     bar.style.width = '100%';
   }, 50);
 }
+
+// initCarousel内のstartTimer()の前に追加
+const dots = document.querySelector('.carousel-dots');
+dots.innerHTML = items.map((_, i) => 
+  `<div class="carousel-dot${i === 0 ? ' active' : ''}" data-index="${i}"></div>`
+).join('');
+
+dots.querySelectorAll('.carousel-dot').forEach(dot => {
+  dot.addEventListener('click', () => {
+    stopTimer();
+    goTo(parseInt(dot.dataset.index), true);
+  });
+});
 
 function startTimer() {
   resetBar();
