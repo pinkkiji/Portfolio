@@ -12,7 +12,9 @@ async function initCarousel() {
   const track = document.querySelector('.carousel-track');
   track.innerHTML = items.map(item => `
     <div class="carousel-item">
-      <img src="${item.image}" alt="${item.title}">
+      <a href="${item.url}" target="_blank">
+        <img src="${item.image}" alt="${item.title}">
+      </a>
       <div class="carousel-info">
         <p class="carousel-title">${item.title}</p>
         <p class="carousel-description">${item.description}</p>
@@ -38,9 +40,10 @@ async function initCarousel() {
 }
 
 function goTo(index, manual = false) {
-    current = (index + total) % total;
-    document.querySelector('.carousel-track').style.transform = 
-      `translateX(-${current * 100}%)`;
+  const step = window.innerWidth > 1024 ? 50 : 100;
+  current = (index + total) % total;
+  document.querySelector('.carousel-track').style.transform = 
+    `translateX(-${current * step}%)`;
     if (!manual) {
       resetBar();
     } else {
