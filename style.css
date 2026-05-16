@@ -361,4 +361,7 @@ nav {
   .card {
   margin: 1rem; 
   }
+  .carousel-item {
+    width: 100%;
+  }
 }
