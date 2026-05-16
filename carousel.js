@@ -22,6 +22,19 @@ async function initCarousel() {
     </div>
   `).join('');
 
+    // initCarousel内のstartTimer()の前に追加
+    const dots = document.querySelector('.carousel-dots');
+    dots.innerHTML = items.map((_, i) => 
+      `<div class="carousel-dot${i === 0 ? ' active' : ''}" data-index="${i}"></div>`
+    ).join('');
+
+    dots.querySelectorAll('.carousel-dot').forEach(dot => {
+      dot.addEventListener('click', () => {
+        stopTimer();
+        goTo(parseInt(dot.dataset.index), true);
+      });
+    });
+
   startTimer();
 }
 
@@ -52,19 +65,6 @@ function resetBar() {
     bar.style.width = '100%';
   }, 50);
 }
-
-// initCarousel内のstartTimer()の前に追加
-const dots = document.querySelector('.carousel-dots');
-dots.innerHTML = items.map((_, i) => 
-  `<div class="carousel-dot${i === 0 ? ' active' : ''}" data-index="${i}"></div>`
-).join('');
-
-dots.querySelectorAll('.carousel-dot').forEach(dot => {
-  dot.addEventListener('click', () => {
-    stopTimer();
-    goTo(parseInt(dot.dataset.index), true);
-  });
-});
 
 function startTimer() {
   resetBar();
