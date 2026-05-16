@@ -25,11 +25,18 @@ async function initCarousel() {
   startTimer();
 }
 
-function goTo(index) {
+function goTo(index, manual = false) {
   current = (index + total) % total;
   document.querySelector('.carousel-track').style.transform = 
     `translateX(-${current * 100}%)`;
-  resetBar();
+  if (!manual) {
+    resetBar();
+  } else {
+    // バーを止めたままにする
+    const bar = document.querySelector('.carousel-bar');
+    bar.style.transition = 'none';
+    bar.style.width = '0%';
+  }
 }
 
 function resetBar() {
