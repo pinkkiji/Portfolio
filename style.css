@@ -215,6 +215,8 @@ nav {
   display: flex;
   gap: 1rem;
   align-items: center;
+  border: 2px solid #e0e0e0;
+  border-radius: 20px;
 }
 
 .carousel-item img {
