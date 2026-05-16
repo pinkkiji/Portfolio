@@ -63,12 +63,12 @@ function stopTimer() {
 
 document.querySelector('.carousel-prev').addEventListener('click', () => {
   stopTimer();
-  goTo(current - 1);
+  goTo(current - 1, true);
 });
 
 document.querySelector('.carousel-next').addEventListener('click', () => {
   stopTimer();
-  goTo(current + 1);
+  goTo(current + 1, true);
 });
 
 initCarousel();
